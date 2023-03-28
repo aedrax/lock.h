@@ -3,7 +3,7 @@ This is a simple C header wrapper for using mutex locks and condition variables
 using the pthreads library.
 
 ## Usage
-### `LOCK`
+### LOCK
 The `LOCK` macro is used to acquire a mutex lock and execute some code while the
 lock is held. It takes two arguments:
 
@@ -22,7 +22,7 @@ LOCK(&mutex, {
 });
 ```
 
-### `WAIT`
+### WAIT
 The `WAIT` macro is used to wait on a condition variable while holding a mutex
 lock. It takes three arguments:
 
@@ -61,7 +61,7 @@ LOCK_SIGNAL(&mutex, &cond, {
 });
 ```
 
-### `LOCK_BROADCAST`
+### LOCK_BROADCAST
 The `LOCK_BROADCAST` macro is similar to `LOCK_SIGNAL`, but it signals all
 threads waiting on the condition variable instead of just one. It takes the same
 three arguments as `LOCK_SIGNAL`.
